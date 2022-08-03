@@ -1,10 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { feed } from './feed/feed';
+import { configureStore } from '@reduxjs/toolkit';
+import feed from './feed/feed';
 
 const store = configureStore({
-    reducer: {
-        feed
-    }
+  reducer: {
+    feed,
+  },
 });
 
 export default store;

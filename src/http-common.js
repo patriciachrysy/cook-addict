@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 export default axios.create({
-    baseUrl: 'https://tasty.p.rapidapi.com',
-    headers: {
-        'X-RapidAPI-Key': 'JvqQ5qAvyUmshPiGZ5U5uEfqzgU0p14QtsnjsnpURuB6QpvYxg',
-        'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
-    }
-})
+  baseURL: 'https://tasty.p.rapidapi.com',
+  headers: {
+    'X-RapidAPI-Key': 'JvqQ5qAvyUmshPiGZ5U5uEfqzgU0p14QtsnjsnpURuB6QpvYxg',
+    'X-RapidAPI-Host': 'tasty.p.rapidapi.com',
+  },
+});
