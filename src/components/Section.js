@@ -32,7 +32,7 @@ const Section = (props) => {
       <div className="section-content">
         {
             feed.items.slice(0, max).map((item) => (
-              <RecipeThumbnail key={item.slug} recipe={item} />
+              <RecipeThumbnail key={item.id} recipe={item} />
             ))
             }
       </div>

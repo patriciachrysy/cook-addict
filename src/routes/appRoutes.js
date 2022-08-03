@@ -8,7 +8,7 @@ const AppRoutes = () => (
   <Routes>
     <Route exact="true" path="/" element={<Feed />} />
     <Route path="/recipes/:category" element={<Recipes />} />
-    <Route path="/recipe/:slug" element={<Recipe />} />
+    <Route path="/recipe/:id/:slug" element={<Recipe />} />
   </Routes>
 );
 

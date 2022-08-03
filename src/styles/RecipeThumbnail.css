@@ -56,3 +56,10 @@
     font-size: 15px;
     margin: 0 5px;
 }
+
+.thumbnail-inner-infos button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+}

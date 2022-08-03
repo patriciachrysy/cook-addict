@@ -9,6 +9,12 @@ const getAllRecipes = (index = 0, limit = 20) => http.get('/recipes/list', {
   },
 });
 
+const getRecipe = (recipeId) => http.get('/recipes/get-more-info', {
+  params: {
+    id: recipeId,
+  },
+});
+
 const getRecipeByFilter = (tagName = null, keyword) => http.get('/recipes/list', {
   params: {
     tags: tagName,
@@ -19,6 +25,7 @@ const getRecipeByFilter = (tagName = null, keyword) => http.get('/recipes/list',
 const RecipeService = {
   getFeed,
   getAllRecipes,
+  getRecipe,
   getRecipeByFilter,
 };
 

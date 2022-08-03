@@ -1,11 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import { RiTimerLine } from 'react-icons/ri';
-import { BsPeopleFill } from 'react-icons/bs';
+import { BsPeopleFill, BsArrowRightCircle } from 'react-icons/bs';
+import { useNavigate } from 'react-router-dom';
+import { startFetchingRecipe } from '../Redux/recipes/recipes';
 import '../styles/RecipeThumbnail.css';
 
 const RecipeThumbnail = (props) => {
   const { recipe } = props;
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const showRecipeDetails = (e) => {
+    e.preventDefault();
+    dispatch(startFetchingRecipe());
+    navigate(`/recipe/${recipe.id}/${recipe.slug}`);
+  };
 
   return (
     <div className="recipe-thumbnail">
@@ -33,6 +44,9 @@ const RecipeThumbnail = (props) => {
               People
             </span>
           </div>
+          <button type="button" onClick={(e) => showRecipeDetails(e)}>
+            <BsArrowRightCircle />
+          </button>
         </div>
       </div>
     </div>
@@ -41,6 +55,8 @@ const RecipeThumbnail = (props) => {
 
 RecipeThumbnail.propTypes = {
   recipe: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    slug: PropTypes.string.isRequired,
     thumbnail_url: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     prep_time_minutes: PropTypes.number.isRequired,

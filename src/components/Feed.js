@@ -15,7 +15,9 @@ const Feed = () => {
   const maxRecipes = 4;
 
   useEffect(() => {
-    dispatch(getFeed());
+    if (feeds.length === 0) {
+      dispatch(getFeed());
+    }
   }, []);
 
   return (

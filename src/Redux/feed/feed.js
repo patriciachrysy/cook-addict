@@ -8,7 +8,7 @@ const LIST_FEED_RECIPES = 'cook-addict/feed/LIST_FEED_RECIPES';
 const initialState = {
   loader: true,
   feeds: [],
-  feed: {},
+  feed: [],
 };
 
 export const getFeed = createAsyncThunk(
@@ -23,12 +23,19 @@ export const getFeed = createAsyncThunk(
   },
 );
 
-export const getByCategory = (payload) => ({ type: LIST_FEED_RECIPES, payload });
+export const getByCategory = (payload) => {
+  console.log('This action is dispatched');
+  return { type: LIST_FEED_RECIPES, payload };
+};
 
 const feed = (state = initialState, action) => {
   switch (action.type) {
     case RETRIEVE_FEED:
-      return action.payload;
+      return {
+        ...state,
+        feeds: action.payload.feeds,
+        loader: action.payload.loader,
+      };
     case LIST_FEED_RECIPES:
       return {
         ...state,

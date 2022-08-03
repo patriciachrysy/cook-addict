@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { GoHome } from 'react-icons/go';
 import { BiSearchAlt } from 'react-icons/bi';
+import { GiCook } from 'react-icons/gi';
 import '../styles/Navbar.css';
 
 const Navbar = () => (
@@ -10,9 +11,14 @@ const Navbar = () => (
       <GoHome />
     </NavLink>
     <span>Cook Addict</span>
-    <button type="button">
-      <BiSearchAlt />
-    </button>
+    <div>
+      <NavLink exact className="navbar__link" to="/recipes/all">
+        <GiCook />
+      </NavLink>
+      <button type="button">
+        <BiSearchAlt />
+      </button>
+    </div>
   </nav>
 );
 
