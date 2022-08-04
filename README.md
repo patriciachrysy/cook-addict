@@ -1,8 +1,8 @@
 # Cook Addict
 
-> This is the app where you could see information about recipes list, filter and display them.
+> This is the app where you could see information about recipes list, filter and display them. All the data are from the [Tasty](https://rapidapi.com/apidojo/api/tasty/) from [RapidApi](https://rapidapi.com).
 
-![screenshot]()
+![screenshot](./screen1.png) ![screenshot](./screen5.png) ![screenshot](./screen3.png) ![screenshot](./screen2.png) ![screenshot](./screen4.png)
 
 
 ## Built With
@@ -25,7 +25,7 @@
 Make sur you have the latest version of NodeJS en npm installed locally.
 
 Run the following commands as listed in your terminal:
-- git clone https://github.com/patriciachrysy/space-travelers.git
+- git clone https://github.com/patriciachrysy/cook-addict.git
 - cd space-travelers
 - npm install
 - npm run build
@@ -54,6 +54,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Shoutout to designer [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for [design inspiration on Behance](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) 
+- Thanks to [Tasty](https://rapidapi.com/apidojo/api/tasty/) from [RapidApi](https://rapidapi.com) for providing the datas
 - Thank you for Microverse for providing the required materials
 
 ## 📝 License
