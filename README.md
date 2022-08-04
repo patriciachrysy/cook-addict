@@ -5,6 +5,9 @@
 ![screenshot](./screen1.png) ![screenshot](./screen5.png) ![screenshot](./screen3.png) ![screenshot](./screen2.png) ![screenshot](./screen4.png)
 
 
+> Wana know more? Watch the presentation video.
+
+[![screenshot](./video_record.png)](https://www.loom.com/share/c526758fa1f24135b8810bcabc00ff85)
 ## Built With
 
 - React
@@ -17,8 +20,7 @@
 
 ## Live Demo
 
-[Live Demo Link on Netlify]()
-
+> Tryout the app here [Cook Addict](https://cookaddict.netlify.app/)
 
 ## Getting Started
 
