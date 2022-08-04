@@ -1,26 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Pacifico&family=Rubik:wght@300&display=swap');
 
-
 .section-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
 }
 
 .section-title h3 {
-    font-family: 'Rubik', sans-serif;
-    font-size: 25px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 25px;
 }
 
 .section-title button {
-    background: none;
-    border: none;
-    font-size: 25px;
+  background: none;
+  border: none;
+  font-size: 25px;
 }
 
 .section-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }

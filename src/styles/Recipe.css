@@ -1,82 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Pacifico&family=Rubik:wght@300&display=swap');
 
 .recipe-details {
-    height: 80vh;
-    overflow-y: scroll;
+  height: 80vh;
+  overflow-y: scroll;
 }
 
 .recipe-banner {
-    width: 100%;
+  width: 100%;
 }
 
 .recipe-banner img {
-    width: 100%;
-    height: 35vh;
+  width: 100%;
+  height: 35vh;
 }
 
 .recipe-banner video {
-    width: 100%;
+  width: 100%;
 }
 
 .recipe-infos {
-    padding: 10px;
+  padding: 10px;
 }
 
-.recipe-infos h1{
-    font-family: 'Kanit', sans-serif;
-    font-size: 40px;
-    margin: 0;
+.recipe-infos h1 {
+  font-family: 'Kanit', sans-serif;
+  font-size: 40px;
+  margin: 0;
 }
 
 .metrics {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
 }
 
-.metrics span{
-    display: flex;
-    align-items: center;
-    font-size: 15px;
-    font-weight: bold;
+.metrics span {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: bold;
 }
 
-.metrics span svg{
-    font-size: 20px;
-    margin: 0 5px;
+.metrics span svg {
+  font-size: 20px;
+  margin: 0 5px;
 }
 
 .tags {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .tags span {
-    font-size: 10px;
-    margin: 3px;
-    padding: 2px;
-    border: 1px solid black;
-    border-radius: 5px;
+  font-size: 10px;
+  margin: 3px;
+  padding: 2px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .recipe-description {
-    padding: 10px;
-    font-family: 'Kanit', sans-serif;
+  padding: 10px;
+  font-family: 'Kanit', sans-serif;
 }
 
 .recipe-steps {
-    padding: 5px 20px;
+  padding: 5px 20px;
 }
 
-.recipe-steps h3{
-    font-family: 'Kanit', sans-serif;
-    text-decoration: underline;
+.recipe-steps h3 {
+  font-family: 'Kanit', sans-serif;
+  text-decoration: underline;
 }
 
 .recipe-steps ul {
-    font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
-.recipe-steps ul li{
-    margin: 10px 0;
+.recipe-steps ul li {
+  margin: 10px 0;
 }
