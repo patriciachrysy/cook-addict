@@ -9,7 +9,13 @@ import Navbar from '../components/Navbar';
 import store from '../Redux/ConfigureStore';
 
 it('renders correctly', () => {
-  const tree = renderer.create(<Provider store={store}><Router><Navbar /></Router></Provider>).toJSON();
+  const tree = renderer.create(
+    <Provider store={store}>
+      <Router>
+        <Navbar />
+      </Router>
+    </Provider>,
+  ).toJSON();
   expect(tree).toMatchSnapshot();
 });
 

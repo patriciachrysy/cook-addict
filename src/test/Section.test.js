@@ -8,57 +8,62 @@ import Section from '../components/Section';
 
 import store from '../Redux/ConfigureStore';
 
-
 const data = {
-    name: 'test section',
-    category: 'test',
-    min_items: 4,
-    items: [
-        {
-            id: 1234,
-            slug: 'test-recipe',
-            thumbnail_url: 'https://test.com/test-recipe.png',
-            name: 'test-recipe',
-            prep_time_minutes: 5,
-            num_servings: 18,
-        },
-        {
-            id: 1235,
-            slug: 'test-recipe',
-            thumbnail_url: 'https://test.com/test-recipe.png',
-            name: 'test-recipe',
-            prep_time_minutes: 5,
-            num_servings: 18,
-        },
-        {
-            id: 1236,
-            slug: 'test-recipe',
-            thumbnail_url: 'https://test.com/test-recipe.png',
-            name: 'test-recipe',
-            prep_time_minutes: 5,
-            num_servings: 18,
-        },
-        {
-            id: 1237,
-            slug: 'test-recipe',
-            thumbnail_url: 'https://test.com/test-recipe.png',
-            name: 'test-recipe',
-            prep_time_minutes: 5,
-            num_servings: 18,
-        },
-        {
-            id: 1234,
-            slug: 'test-recipe',
-            thumbnail_url: 'https://test.com/test-recipe.png',
-            name: 'test-recipe',
-            prep_time_minutes: 5,
-            num_servings: 18,
-        },
-    ]
-  }
+  name: 'test section',
+  category: 'test',
+  min_items: 4,
+  items: [
+    {
+      id: 1234,
+      slug: 'test-recipe',
+      thumbnail_url: 'https://test.com/test-recipe.png',
+      name: 'test-recipe',
+      prep_time_minutes: 5,
+      num_servings: 18,
+    },
+    {
+      id: 1235,
+      slug: 'test-recipe',
+      thumbnail_url: 'https://test.com/test-recipe.png',
+      name: 'test-recipe',
+      prep_time_minutes: 5,
+      num_servings: 18,
+    },
+    {
+      id: 1236,
+      slug: 'test-recipe',
+      thumbnail_url: 'https://test.com/test-recipe.png',
+      name: 'test-recipe',
+      prep_time_minutes: 5,
+      num_servings: 18,
+    },
+    {
+      id: 1237,
+      slug: 'test-recipe',
+      thumbnail_url: 'https://test.com/test-recipe.png',
+      name: 'test-recipe',
+      prep_time_minutes: 5,
+      num_servings: 18,
+    },
+    {
+      id: 1234,
+      slug: 'test-recipe',
+      thumbnail_url: 'https://test.com/test-recipe.png',
+      name: 'test-recipe',
+      prep_time_minutes: 5,
+      num_servings: 18,
+    },
+  ],
+};
 
 it('renders correctly', () => {
-  const tree = renderer.create(<Provider store={store}><Router><Section feed={data}/></Router></Provider>).toJSON();
+  const tree = renderer.create(
+    <Provider store={store}>
+      <Router>
+        <Section feed={data} />
+      </Router>
+    </Provider>,
+  ).toJSON();
   expect(tree).toMatchSnapshot();
 });
 

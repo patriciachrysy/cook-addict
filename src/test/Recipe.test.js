@@ -8,9 +8,14 @@ import Recipe from '../components/Recipe';
 
 import store from '../Redux/ConfigureStore';
 
-
 it('renders correctly', () => {
-  const tree = renderer.create(<Provider store={store}><Router><Recipe /></Router></Provider>).toJSON();
+  const tree = renderer.create(
+    <Provider store={store}>
+      <Router>
+        <Recipe />
+      </Router>
+    </Provider>,
+  ).toJSON();
   expect(tree).toMatchSnapshot();
 });
 

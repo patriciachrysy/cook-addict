@@ -8,9 +8,14 @@ import Filter from '../components/Filter';
 
 import store from '../Redux/ConfigureStore';
 
-
 it('renders correctly', () => {
-  const tree = renderer.create(<Provider store={store}><Router><Filter /></Router></Provider>).toJSON();
+  const tree = renderer.create(
+    <Provider store={store}>
+      <Router>
+        <Filter />
+      </Router>
+    </Provider>,
+  ).toJSON();
   expect(tree).toMatchSnapshot();
 });
 

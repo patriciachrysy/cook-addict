@@ -8,18 +8,23 @@ import RecipeThumbnail from '../components/RecipeThumbnail';
 
 import store from '../Redux/ConfigureStore';
 
-
 const data = {
-    id: 1234,
-    slug: 'test-recipe',
-    thumbnail_url: 'https://test.com/test-recipe.png',
-    name: 'test-recipe',
-    prep_time_minutes: 5,
-    num_servings: 18,
-  }
+  id: 1234,
+  slug: 'test-recipe',
+  thumbnail_url: 'https://test.com/test-recipe.png',
+  name: 'test-recipe',
+  prep_time_minutes: 5,
+  num_servings: 18,
+};
 
 it('renders correctly', () => {
-  const tree = renderer.create(<Provider store={store}><Router><RecipeThumbnail recipe={data}/></Router></Provider>).toJSON();
+  const tree = renderer.create(
+    <Provider store={store}>
+      <Router>
+        <RecipeThumbnail recipe={data} />
+      </Router>
+    </Provider>,
+  ).toJSON();
   expect(tree).toMatchSnapshot();
 });
 
