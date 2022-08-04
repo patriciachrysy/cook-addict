@@ -10,7 +10,6 @@ const Feed = () => {
   const feedData = useSelector((state) => state.feed);
   const { loader, feeds } = feedData;
   const mainFeeds = feeds.slice(1, feeds.length);
-  console.log(mainFeeds);
   const dispatch = useDispatch();
   const maxRecipes = 4;
 

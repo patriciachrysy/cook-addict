@@ -17,16 +17,12 @@ export const getFeed = createAsyncThunk(
     const res = await RecipeService.getFeed();
     const firstFeed = res.data.results[0];
     const otherFeeds = res.data.results.filter((elt) => elt.category && elt.type === 'carousel');
-    console.log([firstFeed, ...otherFeeds]);
     const payload = { loader: false, feeds: [firstFeed, ...otherFeeds] };
     return payload;
   },
 );
 
-export const getByCategory = (payload) => {
-  console.log('This action is dispatched');
-  return { type: LIST_FEED_RECIPES, payload };
-};
+export const getByCategory = (payload) => ({ type: LIST_FEED_RECIPES, payload });
 
 const feed = (state = initialState, action) => {
   switch (action.type) {

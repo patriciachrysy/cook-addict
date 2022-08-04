@@ -15,8 +15,10 @@ const getRecipe = (recipeId) => http.get('/recipes/get-more-info', {
   },
 });
 
-const getRecipeByFilter = (tagName = null, keyword) => http.get('/recipes/list', {
+const getRecipeByFilter = (tagName = null, keyword = null) => http.get('/recipes/list', {
   params: {
+    from: 0,
+    size: 20,
     tags: tagName,
     q: keyword,
   },

@@ -31,3 +31,16 @@ nav button {
     border: none;
     font-size: 25px;
 }
+
+.filter-popover {
+    font-family: 'Rubik', sans-serif;
+    width: 70% !important;
+    margin: auto;
+    position: absolute !important;
+    background-color: white;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 5px;
+    inset: 8vh 0 auto auto !important;
+    transform: none !important;
+}

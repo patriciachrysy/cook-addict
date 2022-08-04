@@ -10,9 +10,7 @@ const Recipes = () => {
   const { category } = useParams();
   const dispatch = useDispatch();
   const feedData = useSelector((state) => state.feed);
-  console.log(feedData);
   const { feed } = feedData;
-  console.log(feed);
   const recipesData = useSelector((state) => state.recipes);
   const { loader, recipes } = recipesData;
   const recipesObj = {
@@ -21,18 +19,24 @@ const Recipes = () => {
     min_items: recipes.length,
     items: recipes,
   };
+  const resultsObj = {
+    name: 'Search results',
+    category: 'search_results',
+    min_items: recipes.length,
+    items: recipes,
+  };
 
   useEffect(() => {
     if (category === 'all') {
       dispatch(getRecipes());
-    } else {
+    } else if (category !== 'search_results') {
       dispatch(getByCategory(category));
     }
   }, []);
 
   return (
     <div className="container">
-      { category !== 'all' && feed.length > 0 && (
+      { category !== 'all' && category !== 'search_results' && feed.length > 0 && (
         <Section
           key={feed[0].category}
           max={feed[0].items.length}
@@ -47,6 +51,18 @@ const Recipes = () => {
               key="all"
               max={recipes.length}
               feed={recipesObj}
+            />
+          )}
+        </div>
+      )}
+      { category === 'search_results' && (
+        <div>
+          { loader && <Loader /> }
+          { !loader && (
+            <Section
+              key="search_results"
+              max={recipes.length}
+              feed={resultsObj}
             />
           )}
         </div>

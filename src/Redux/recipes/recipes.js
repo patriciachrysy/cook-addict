@@ -1,13 +1,13 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import RecipeService from '../../services/RecipeService';
 
-const RETRIEVE_ASYNC_RECIPES = 'cook-addict/feed/RETRIEVE_RECIPES';
-const RETRIEVE_RECIPES = 'cook-addict/feed/RETRIEVE_RECIPES/fulfilled';
-const RETRIEVE_ASYNC_BY_FILTER_RECIPES = 'cook-addict/feed/RETRIEVE_BY_FILTER_RECIPES';
-const RETRIEVE_BY_FILTER_RECIPES = 'cook-addict/feed/RETRIEVE_BY_FILTER_RECIPES/fulfilled';
-const RETRIEVE_ASYNC_RECIPE = 'cook-addict/feed/RETRIEVE_RECIPE';
-const RETRIEVE_RECIPE = 'cook-addict/feed/RETRIEVE_RECIPE/fulfilled';
-const START_FETCHING_RECIPE = 'cook-addict/feed/START_FETCHING_RECIPE';
+const RETRIEVE_ASYNC_RECIPES = 'cook-addict/recipe/RETRIEVE_RECIPES';
+const RETRIEVE_RECIPES = 'cook-addict/recipe/RETRIEVE_RECIPES/fulfilled';
+const RETRIEVE_ASYNC_BY_FILTER_RECIPES = 'cook-addict/recipe/RETRIEVE_BY_FILTER_RECIPES';
+const RETRIEVE_BY_FILTER_RECIPES = 'cook-addict/recipe/RETRIEVE_BY_FILTER_RECIPES/fulfilled';
+const RETRIEVE_ASYNC_RECIPE = 'cook-addict/recipe/RETRIEVE_RECIPE';
+const RETRIEVE_RECIPE = 'cook-addict/recipe/RETRIEVE_RECIPE/fulfilled';
+const START_FETCHING_RECIPE = 'cook-addict/recipe/START_FETCHING_RECIPE';
 
 const initialState = {
   loader: true,
@@ -19,7 +19,6 @@ export const getRecipes = createAsyncThunk(
   RETRIEVE_ASYNC_RECIPES,
   async () => {
     const res = await RecipeService.getAllRecipes();
-    console.log(res.data.results);
     const payload = { loader: false, recipes: res.data.results };
     return payload;
   },
@@ -27,9 +26,8 @@ export const getRecipes = createAsyncThunk(
 
 export const getRecipesByFilter = createAsyncThunk(
   RETRIEVE_ASYNC_BY_FILTER_RECIPES,
-  async (tag, keyword) => {
-    const res = await RecipeService.getRecipeByFilter(tag, keyword);
-    console.log(res.data.results);
+  async (searchKeys) => {
+    const res = await RecipeService.getRecipeByFilter(searchKeys.tag, searchKeys.keyword);
     const payload = { loader: false, recipes: res.data.results };
     return payload;
   },
@@ -41,7 +39,6 @@ export const getRecipe = createAsyncThunk(
   RETRIEVE_ASYNC_RECIPE,
   async (recipeId) => {
     const res = await RecipeService.getRecipe(recipeId);
-    console.log(res.data);
     const payload = { loader: false, recipe: res.data };
     return payload;
   },
