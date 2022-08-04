@@ -1,8 +1,5 @@
 body {
-  width: 30vw;
-  height: 90vh;
-  margin: 4vh auto;
-  border: 1px solid rgb(215, 211, 211);
+  margin: 0;
   position: relative;
   font-family:
     -apple-system,
