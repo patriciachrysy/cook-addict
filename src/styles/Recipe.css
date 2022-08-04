@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Pacifico&family=Rubik:wght@300&display=swap');
 
 .recipe-details {
-  height: 80vh;
+  height: 100vh;
   overflow-y: scroll;
 }
 
