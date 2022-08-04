@@ -2,33 +2,35 @@
 
 exports[`renders correctly 1`] = `
 <nav>
-  <a
-    aria-current="page"
-    className="navbar__link active"
-    exact={true}
-    href="/"
-    onClick={[Function]}
-  >
-    <svg
-      fill="currentColor"
-      height="1em"
-      stroke="currentColor"
-      strokeWidth="0"
-      style={
-        Object {
-          "color": undefined,
-        }
-      }
-      viewBox="0 0 16 16"
-      width="1em"
-      xmlns="http://www.w3.org/2000/svg"
+  <div>
+    <a
+      aria-current="page"
+      className="navbar__link active"
+      exact={true}
+      href="/"
+      onClick={[Function]}
     >
-      <path
-        d="M16 9l-3-3V2h-2v2L8 1 0 9h2l1 5c0 .55.45 1 1 1h8c.55 0 1-.45 1-1l1-5h2zm-4 5H9v-4H7v4H4L2.81 7.69 8 2.5l5.19 5.19L12 14z"
-        fillRule="evenodd"
-      />
-    </svg>
-  </a>
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 16 16"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16 9l-3-3V2h-2v2L8 1 0 9h2l1 5c0 .55.45 1 1 1h8c.55 0 1-.45 1-1l1-5h2zm-4 5H9v-4H7v4H4L2.81 7.69 8 2.5l5.19 5.19L12 14z"
+          fillRule="evenodd"
+        />
+      </svg>
+    </a>
+  </div>
   <span>
     Cook Addict
   </span>
