@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<form
+  className="filter-form"
+  onSubmit={[Function]}
+>
+  <div
+    className="content"
+  >
+    <input
+      onChange={[Function]}
+      placeholder="Tag"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Keyword"
+      type="text"
+      value=""
+    />
+    <button
+      type="submit"
+    >
+      Search
+    </button>
+  </div>
+</form>
+`;
